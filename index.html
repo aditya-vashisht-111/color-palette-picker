@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Color Palette Picker – Colorblind Safe</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Color Palette Picker</h1>
+    <p>Generate colorblind-friendly palettes for dashboards & charts.</p>
+
+    <label>Select number of colors:</label>
+    <select id="colorCount">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+
+    <button onclick="generatePalette()">Generate Palette</button>
+
+    <h2>Palette Preview</h2>
+    <div id="palettePreview" class="palette"></div>
+
+    <h2>Light Mode Chart Preview</h2>
+    <div id="chartLight" class="chart"></div>
+
+    <h2>Dark Mode Chart Preview</h2>
+    <div id="chartDark" class="chart dark"></div>
+
+    <h2>Export Palette</h2>
+
+    <div class="code-block">
+        <h3>HEX List</h3>
+        <pre id="hexOutput"></pre>
+        <button onclick="copyText('hexOutput')">Copy</button>
+    </div>
+
+    <div class="code-block">
+        <h3>CSS Variables</h3>
+        <pre id="cssOutput"></pre>
+        <button onclick="copyText('cssOutput')">Copy</button>
+    </div>
+
+    <div class="code-block">
+        <h3>Matplotlib List</h3>
+        <pre id="mplOutput"></pre>
+        <button onclick="copyText('mplOutput')">Copy</button>
+    </div>
+
+    <div class="code-block">
+        <h3>Seaborn Palette</h3>
+        <pre id="snsOutput"></pre>
+        <button onclick="copyText('snsOutput')">Copy</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
